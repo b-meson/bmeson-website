@@ -6,32 +6,38 @@ import { defineConfig, fontProviders } from 'astro/config';
 import icon from "astro-icon"
 
 
+import cloudflare from '@astrojs/cloudflare';
+
+
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://bmeson.style',
-	integrations: [mdx(), sitemap(), icon()],
-	fonts: [
-		{
-			provider: fontProviders.local(),
-			name: 'Atkinson',
-			cssVariable: '--font-atkinson',
-			fallbacks: ['sans-serif'],
-			options: {
-				variants: [
-					{
-						src: ['./src/assets/fonts/atkinson-regular.woff'],
-						weight: 400,
-						style: 'normal',
-						display: 'swap',
-					},
-					{
-						src: ['./src/assets/fonts/atkinson-bold.woff'],
-						weight: 700,
-						style: 'normal',
-						display: 'swap',
-					},
-				],
-			},
-		},
+  site: 'https://bmeson.style',
+  integrations: [mdx(), sitemap(), icon()],
+
+  fonts: [
+      {
+          provider: fontProviders.local(),
+          name: 'Atkinson',
+          cssVariable: '--font-atkinson',
+          fallbacks: ['sans-serif'],
+          options: {
+              variants: [
+                  {
+                      src: ['./src/assets/fonts/atkinson-regular.woff'],
+                      weight: 400,
+                      style: 'normal',
+                      display: 'swap',
+                  },
+                  {
+                      src: ['./src/assets/fonts/atkinson-bold.woff'],
+                      weight: 700,
+                      style: 'normal',
+                      display: 'swap',
+                  },
+              ],
+          },
+      },
 	],
+
+  adapter: cloudflare(),
 });
