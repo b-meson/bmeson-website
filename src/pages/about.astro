@@ -1,25 +1,52 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
+import AboutHeroImage from '../assets/FreddyCropped.png';
 import Layout from '../layouts/BlogPost.astro';
 ---
 
 <Layout
 	title="About & CV"
 	description="Since Wikipedia won't accept my bribes"
-	pubDate={new Date('Oct 02 2026')}
+	pubDate={new Date('Oct 11 2026')}
 	heroImage={AboutHeroImage}
 >
 
+<h1>Work & Responsibilities</h1>
+
 <p>
-Hi folks, I am an aging millenial whose biggest fear in life is being called a "poser" by my younger self. 
-</p>
-<p>
-I have an unhealthy obsession with all technologies, including police surveillance. I am an expert on police surveillance and my work has been covered extensively in places like The New York Times, the Chicago Sun-Times, and 404Media. My work often takes me to talk to criminal defense attorneys, members of the public, classrooms, or elected officials. If you want to retain me as an expert witness under Rule 26 of the federal rules of civ pro, get in touch. 
+Hi folks, I am an aging millenial whose biggest fear in life is being called a "poser" by my younger self. 	
 </p>
 
 <p>
-I am a co-founder and staff worker at the Lucy Parsons Labs which we established over 11 years ago. I also have also worked on government transparency issues, classification reform, the Freedom of Information Act, and other projects. I previously was a software and security engineer and studied physics. 
+I have an unhealthy obsession with all technologies, including police surveillance. I am an expert on police surveillance and my work has been covered extensively. My tips and primary source documents into Clearview AI because the basis for <a href="https://web.archive.org/web/20200630164223/https://www.nytimes.com/2020/01/20/reader-center/insider-clearview-ai.html">The New York Times front-page coverage</a> of the company and lead to international outrage, including millions of dollars of fines levied against the company and lawsuits all over the world.
+As retaliation, the company attempted to <a href="https://www.politico.com/news/2021/09/24/clearview-ai-subpoena-watchdog-groups-514273">subpoena me multiple times to reveal my records and sources.</a> 
 </p>
 
+<p>
+Of course, a large part of my work is focused on Chicago and has been covered by places like the <a href="https://chicago.suntimes.com/crime/2026/08/27/flock-license-plate-reader-alpr-chicago-suburb">Chicago Sun-Times</a>. My original writings can be found in places like <a href="https://www.404media.co/facial-recognition-company-clearview-attempted-to-buy-social-security-numbers-and-mugshots-for-its-database/">404Media</a>, <a href="https://truthout.org/articles/ice-kidnapped-my-neighbor-in-broad-daylight-the-aftermath-left-me-reeling/">Truthout</a>, and <a href="https://www.thenation.com/article/politics/doj-trump-espionage-act/">The Nation</a> among others. 
+It also means I often talk to politicians, local organizers, criminal defense attorneys, members of the public, classrooms, or at conferences.
+</p>
+
+<p>
+<b>If you want to retain me as an expert witness about police surveillance technologies under Rule 26 or on the local level, get in touch.</b>
+</p>
+<p>
+I am a co-founder and staff worker at the Lucy Parsons Labs which we established over 11 years ago. I have also worked on government transparency issues, classification reform, the Freedom of Information Act, and other projects. I previously was a software and security engineer and studied physics. 
+</p>
+
+<h2>CV</h2>
+
+<div>
+<style>
+	.pdfobject-container { height: 920px; border: 1px solid #ccc; }
+</style>
+<div id="my-pdf"></div>
+<script is:inline src="https://unpkg.com/pdfobject"></script>
+<script is:inline>
+	const pdfObject = window["PDFObject"];
+	if (pdfObject) {
+		pdfObject.embed("/docs/martinez_cv_2026_redacted.pdf", "#my-pdf");
+	}
+</script>
+</div>
 
 </Layout>
