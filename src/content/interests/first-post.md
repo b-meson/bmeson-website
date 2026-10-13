@@ -21,6 +21,6 @@ Anthropologically, I know we all view our sense of self most distinctly in our d
 
 I love this photo of Suffyiah Khan standing up in a street confontration to the EDL, a noxious group of racists. What makes Suffyiah Khan a punk in the photo? 
 
-<img src="../../assets/images/suffiyah.png" alt="A desi woman in a jean jacket staring down the EDL.">
+![A desi woman in a jean jacket staring down the EDL.](../../assets/images/suffiyah.png)
 
 The denim jacket is, of course, a staple of the working class. But being working class does not necessarily make a person antifascist? Is punk related to a specific _look_? I've meet plenty of self-described punks who are very apolitical. And of course, we know about the (non)inclusion of women, queer, and Brown people in [the punk and ska scene](https://www.youtube.com/watch?v=5aIf5_U5OG4) (as reflected by the Specials shirt). So clearly, there's more than external appearances. Besides, we carry a new world in our hearts.
