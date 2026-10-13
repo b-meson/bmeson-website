@@ -39,6 +39,7 @@ const posts = (await getCollection('interests')).sort(
 				width: 100%;
 				margin-bottom: 1rem;
 				text-align: center;
+				margin: auto;
 			}
 
 {/* Front Page Hero Image CSS: EDIT THIS */}
@@ -46,6 +47,8 @@ const posts = (await getCollection('interests')).sort(
 				width: auto;
 				height:auto;
 				display: flex;
+				margin: auto;
+				margin-bottom: 2em;
 			}
 
 			ul li:first-child .title {
@@ -54,10 +57,8 @@ const posts = (await getCollection('interests')).sort(
 			ul li img {
 				margin-bottom: 0.5rem;
 				border-radius: 12px;
-				display: block;
 				border-radius: 12px;
 				box-shadow: var(--box-shadow);
-				height: 85%;
 			}
 			ul li a {
 				display: block;
@@ -81,6 +82,7 @@ const posts = (await getCollection('interests')).sort(
 			@media (max-width: 720px) {
 				ul {
 					gap: 0.5em;
+					align: auto;
 				}
 				ul li {
 					width: 100%;
