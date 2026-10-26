@@ -8,12 +8,11 @@ import { Icon } from 'astro-icon/components'
 	<div class="social-links">
 		<a href="https://bsky.app/profile/bmeson.lucyparsonslabs.com" target="_blank">
 			<span class="srb-only">Follow Me on Bluesky</span>
-
-			<Icon name="bluesky" />
+			<Icon class="bsk-icon-footer" name="bluesky" />
 		</a>
 		<a href="https://bsky.app/profile/lucyparsonslabs.com" target="_blank">
 			<span class="srb-only">Follow LPL on Bluesky</span>
-			<Icon name="bluesky" />
+			<Icon class="bsk-icon-footer" name="bluesky" />
 		</a>
 	</div>
 </footer>
@@ -32,6 +31,8 @@ import { Icon } from 'astro-icon/components'
 		gap: 4em;
 		margin-top: 1em;
 		font-family: 'Zen Maru Gothic', sans-serif;
+		padding-right: 8px;
+
 	}
 	.social-links a {
 		text-decoration: none;
@@ -40,5 +41,11 @@ import { Icon } from 'astro-icon/components'
 	}
 	.social-links a:hover {
 		color: rgb(var(--gray-dark));
+		padding-right: 8px;
+
+	}
+
+	.bsk-icon-footer {
+		padding-left: 8px;
 	}
 </style>

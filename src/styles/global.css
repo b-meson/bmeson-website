@@ -5,6 +5,13 @@
  */
 
 :root {
+
+--color-1: #FF6B35;
+--color-2: #F7C59F;
+--color-3: #EFEFD0;
+--color-4: #004E89;
+--color-5: #1A659E;
+
 	--accent: #2337ff;
 	--accent-dark: #000d8a;
 	--black: 15, 18, 25;
