@@ -10,18 +10,12 @@ import {Icon} from "astro-icon/components";
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/about">About & CV</HeaderLink>
 			<HeaderLink href="/interests">Stuff I Find Interesting</HeaderLink>
-		</div>
-		<div class="social-links">
-
-			<a href="https://bsky.app/profile/bmeson.lucyparsonslabs.com" target="_blank">
-				<span class="sbr-only">Follow me on BlueSky</span>
-			<Icon name="bluesky" />
-			</a>
-		</div>
+			<HeaderLink href="/about">About & CV</HeaderLink>
+		</div>	
 	</nav>
 </header>
+
 <style>
 	header {
 		margin: 0;
@@ -29,9 +23,19 @@ import {Icon} from "astro-icon/components";
 		background: white;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
 	}
+	h1 {
+		margin: 12px 0 12px 0;
+        font-family: 'Zen Maru Gothic', sans-serif;
+		display: flex;
+		align-items: left;
+		justify-content: left;
+	}
 	h2 {
-		margin: 0;
-		font-size: 1em;
+		margin: 12px 0 12px 0;
+		font-size: 2em;
+		font-family: 'Zen Maru Gothic', sans-serif;
+		align-items: left;
+		justify-content: left;
 	}
 
 	h2 a,
@@ -40,7 +44,7 @@ import {Icon} from "astro-icon/components";
 	}
 	nav {
 		display: flex;
-		align-items: center;
+		align-items: right;
 		justify-content: space-between;
 	}
 	nav a {
@@ -57,6 +61,11 @@ import {Icon} from "astro-icon/components";
 	.social-links a {
 		display: flex;
 	}
+
+	.sbr-only {
+		padding-right: 8px;
+	}
+	
 	@media (max-width: 720px) {
 		.social-links {
 			display: none;
