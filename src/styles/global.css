@@ -79,7 +79,7 @@ h4,
 h5,
 h6 {
 	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
+	color: rgb(var(--copy-lighter));
 	line-height: 1.2;
 }
 h1 {
@@ -97,6 +97,7 @@ h3 {
 h4 {
 	font-family: 'Zen Maru Gothic', sans-serif;
 	font-size: 1.563em;
+	color: rgb(var(--copy-lighter));
 }
 h5 {
 	font-family: 'Zen Maru Gothic', sans-serif;
@@ -173,6 +174,11 @@ hr {
 	border: none;
 	border-top: 1px solid rgb(var(--gray-light));
 }
+
+ul li{
+	color: rgb(var(--copy-light));
+}
+
 @media (max-width: 720px) {
 	body {
 		font-size: 18px;
