@@ -5,9 +5,9 @@ pubDate: 'October 13 2026'
 heroImage: '../../assets/images/huiben.png'
 ---
 
-# The Self
+#### The Self
 
-For many people, style choices are part of the few ways they express themselves artistically. As a person who has to exist in many different contexts (politically, professionally, religiously), it can feel a bit overwhelming to think about, "what should I wear today?"
+For most, style choices are part of the few ways they express themselves artistically. As a person who has to exist in many different contexts (politically, professionally, religiously), it can feel a bit overwhelming to think about, "what should I wear today?"
 
 I used to frequently visit Capitol Hill and talk to Congressional staffers and I felt deeply conflicted. Particularly, when I was a younger person, I hated the idea of wearing a suit and tie and what that clothes _represented_. But, I don't actually think this is a case where you like, abandon your ideals as you get older or have to make compromises to exist under capitalism. What I think really emerged in me is that I began to strongly believe in *ideas* like direct democracy (but not in the sense of Rousseaian republicanism.) So I began to see the clothes I wore as an extension of my own beliefs and not as a way of fitting in to expected mode of respectibility. 
 

@@ -6,33 +6,42 @@
 
 :root {
 
---primary: #000f8e;
---primary-content: #8e9aff;
---foreground:: #000a5b;
---primary-light: #0014c1;
+	--primary: #000f8e;
+	--primary-content: #8e9aff;
+	--foreground: #000a5b;
+	--primary-light: #0014c1;
 
---secondary: #8e2c00;
---secondary-content: #ffb18e;
---secondary-dark: #100e0e;
---secondary-light: #c13c00;
+	--secondary: #8e2c00;
+	--secondary-content: #ffb18e;
+	--secondary-dark: #100e0e;
+	--secondary-light: #c13c00;
 
---background: #111222;
---foreground: #191c34;
---border: #292e56;
+	--background: #111222;
+	--foreground: #191c34;
+	--border: #292e56;
 
---copy: #fafafd;
---copy-light: #cbcee6;
---copy-lighter: #878dc5;
+	--copy: #fafafd;
+	--copy-light: #cbcee6;
+	--copy-lighter: #878dc5;
 
---success: #008e00;
---warning: #8e8e00;
---error: #8e0000;
---success-content: #8eff8e;
---warning-content: #ffff8e;
---error-content: #ff8e8e;
+	--success: #008e00;
+	--warning: #8e8e00;
+	--error: #8e0000;
+	--success-content: #8eff8e;
+	--warning-content: #ffff8e;
+	--error-content: #ff8e8e;
 
 
-/*
+	--gray: 96, 115, 159;
+	--gray-light: 229, 233, 240;
+	--gray-dark: 34, 41, 57;
+	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
+	--box-shadow:
+		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
+		0 16px 32px rgba(var(--gray), 33%);
+
+
+	/*
 
 	old colors idk if i'll revert
 	--accent: #2337ff;
@@ -52,7 +61,7 @@
 body {
 	font-family: 'Zen Maru Gothic', sans-serif;
 	font-weight: 400;
-  	font-style: normal;
+	font-style: normal;
 	margin: 0;
 	padding: 0;
 	text-align: left;
@@ -64,125 +73,140 @@ body {
 	font-size: 20px;
 	line-height: 1.7;
 }
+
 main {
-	width: 720px;
+	width: 100%;
 	max-width: calc(100% - 2em);
-	margin: auto;
+	margin: 0 auto;
 	padding: 3em 1em;
 	background: linear-gradient(var(--primary));
+}
 
+main.p {
+	margin-bottom: 1em;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 0 0 0.5rem 0;
-	color: rgb(var(--copy-lighter));
-	line-height: 1.2;
-}
+
 h1 {
 	font-family: 'Zen Maru Gothic', sans-serif;
 	font-size: 3.052em;
+	color: rgb(var(--copy-light));
+
 }
+
 h2 {
 	font-family: 'Zen Maru Gothic', sans-serif;
 	font-size: 2.441em;
+	color: rgb(var(--copy-light));
 }
+
 h3 {
 	font-family: 'Zen Maru Gothic', sans-serif;
-		font-size: 1.953em;
+	font-size: 1.953em;
+	color: rgb(var(--copy-light));
 }
+
 h4 {
 	font-family: 'Zen Maru Gothic', sans-serif;
 	font-size: 1.563em;
-	color: rgb(var(--copy-lighter));
+	color: rgb(var(--copy-light));
 }
+
 h5 {
 	font-family: 'Zen Maru Gothic', sans-serif;
 	font-size: 1.25em;
+	color: rgb(var(--copy-light));
 }
-strong,
+
+h6 {
+	margin: 0 0 0.5rem 0;
+	color: rgb(var(--copy-light));
+	line-height: 1.2;
+}
+
 b {
 	font-weight: 700;
 }
 
-a {
-  color: var(--primary-light);
-}
-
-a:link {
-  color: var(--primary-light);
-}
-
-/* visited link */
-a:visited {
-  color: var(--primary-content);
-}
-
-/* mouse over link */
-a:hover {
-  color: var(--warning-content);
-}
-
-/* selected link */
-a:active {
-  color: var(--copy-lighter);
-}
 
 p {
 	margin-bottom: 1em;
 }
+
 .prose p {
 	margin-bottom: 2em;
 }
+
 textarea {
 	width: 100%;
 	font-size: 16px;
 }
+
 input {
 	font-size: 16px;
 }
+
 table {
 	width: 100%;
 }
+
 img {
 	max-width: 100%;
 	height: auto;
 	border-radius: 8px;
 }
+
 code {
 	padding: 2px 5px;
 	background-color: rgb(var(--background));
 	border-radius: 2px;
 }
+
 pre {
 	padding: 1.5em;
 	border-radius: 8px;
 }
-pre > code {
+
+pre>code {
 	all: unset;
 }
+
 blockquote {
 	border-left: 4px solid var(--copy-light);
 	padding: 0 0 0 20px;
 	margin: 0;
 	font-size: 1.333em;
 }
+
 hr {
 	border: none;
 	border-top: 1px solid rgb(var(--gray-light));
 }
 
-ul li{
+ul li {
 	color: rgb(var(--copy-light));
+}
+
+.title {
+	margin-bottom: 1em;
+	padding: 1em 0;
+	color: rgb(var(--copy-light));
+	line-height: 1;
+}
+
+.date {
+	margin-bottom: 0.5em;
+	color: rgb(var(--gray));
+}
+
+.last-updated-on {
+	font-style: italic;
 }
 
 @media (max-width: 720px) {
 	body {
 		font-size: 18px;
 	}
+
 	main {
 		padding: 1em;
 	}
@@ -204,4 +228,23 @@ ul li{
 	clip-path: inset(50%);
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
+}
+
+.hero-image {
+	width: 100%;
+}
+
+.hero-image img {
+	display: block;
+	margin: 0 auto;
+	border-radius: 12px;
+	box-shadow: var(--box-shadow);
+}
+
+.prose {
+	width: 720px;
+	max-width: calc(100% - 2em);
+	margin: auto;
+	padding: 1em;
+	color: rgb(var(--copy));
 }

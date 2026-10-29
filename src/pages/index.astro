@@ -1,31 +1,74 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import { Image } from "astro:assets";
+import berlinImage from "../assets/images/berlin_raw.jpg";
 ---
 
 <!doctype html>
-
-<html lang="en" data-theme="dark">
-
-
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header />
-		<main class="main">
-			<h1>🧑‍🚀 Welcome visitor</h1>
-			<br>
-			<p>
-				Hi everyone, I am working on building this new personal site for myself. Click the About link to learn more about my professional life.
-			</p>
 
-			<p>
-				This website is built using <a href="https://astro.build/">Astro</a>. I have a strong dislike of JavaScript and all things front-end so its nice to use a static site generator. 
-			</p>
+		<main class="main">
+			<div class="main">
+				<div class="img-index">
+					<Image
+						src={berlinImage}
+						alt="a photo of old NSA listening posts in Berlin"
+					/>
+				</div>
+
+				<h1>🧑‍🚀 Welcome visitor</h1>
+				<br />
+				<p>
+					Hi everyone, I am working on building this new personal site
+					for myself. Click the About link to learn more about my
+					professional life.
+				</p>
+
+				<p>
+					This website is built using <a href="https://astro.build/"
+						>Astro</a
+					>. I have a strong dislike of JavaScript and all things
+					front-end so its nice to use a static site generator.
+				</p>
+			</div>
 		</main>
+
+		<style is:global>
+			.main {
+				width: calc(100% - 2em);
+				max-width: 100%;
+				margin: 0;
+				text-align: center;
+			}
+			a:link {
+				color: rgb(var(--copy-light));
+			}
+
+			/* visited link */
+			a:visited {
+				color: rgb(var(--primary-content));
+			}
+
+			/* mouse over link */
+			a:hover {
+				color: rgb(var(--warning-content));
+			}
+
+			/* selected link */
+			a:active {
+				color: rgb(var(--copy-lighter));
+			}
+		</style>
+
 		<Footer />
 	</body>
 </html>
