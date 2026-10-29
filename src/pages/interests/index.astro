@@ -27,45 +27,44 @@ const posts = (await getCollection('interests')).sort(
 				list-style-type: none;
 				margin: 0;
 				padding: 0;
+				color: rgb(var(--copy-light));
+
 			}
 			ul li {
 				width: calc(50% - 1rem);
+				color: rgb(var(--copy-light));
+
 			}
 			ul li * {
 				text-decoration: none;
+				color: rgb(var(--copy-light));
 				transition: 0.2s ease;
 			}
 			ul li:first-child {
 				width: 100%;
+				color: rgb(var(--copy-light));
 				margin-bottom: 1rem;
 				text-align: center;
-				margin: auto;
 			}
-
-{/* Front Page Hero Image CSS: EDIT THIS */}
-			ul li:first-child img {
-				width: auto;
-				height:auto;
-				display: flex;
-				margin: auto;
-				margin-bottom: 2em;
+			
+						ul li:first-child img {
+				width: 100%;
 			}
-
 			ul li:first-child .title {
 				font-size: 2.369rem;
+				color: rgb(var(--copy-light));
 			}
 			ul li img {
 				margin-bottom: 0.5rem;
 				border-radius: 12px;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
 			}
 			ul li a {
 				display: block;
+				color: rgb(var(--copy-light));
 			}
 			.title {
 				margin: 0;
-				color: rgb(var(--copy-lighter));
+				color: rgb(var(--copy-light));
 				line-height: 1;
 			}
 			.date {
@@ -79,6 +78,7 @@ const posts = (await getCollection('interests')).sort(
 			ul a:hover img {
 				box-shadow: var(--box-shadow);
 			}
+				
 			@media (max-width: 720px) {
 				ul {
 					gap: 0.5em;
@@ -107,7 +107,7 @@ const posts = (await getCollection('interests')).sort(
 							<li>
 								<a href={`/interests/${post.id}/`}>
 									{post.data.heroImage && (
-										<Image width={360} height={720} src={post.data.heroImage} alt="" />
+										<Image src={post.data.heroImage} alt="" />
 									)}
 									<h4 class="title">{post.data.title}</h4>
 									<p class="date">
