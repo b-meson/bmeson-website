@@ -19,7 +19,7 @@ import {Icon} from "astro-icon/components";
 <style>
 	header {
 		margin: 0;
-		padding: 0 1em;
+		padding: 0.5em 1em;
 		background: linear-gradient(var(--foreground)) no-repeat;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
 	}
@@ -32,10 +32,9 @@ import {Icon} from "astro-icon/components";
 	}
 	h2 {
 		margin: 12px 0 12px 0;
-		font-size: 2em;
+		font-size: clamp(1.25rem, 4vw, 2em);
 		font-family: 'Zen Maru Gothic', sans-serif;
-		align-items: left;
-		justify-content: left;
+		line-height: 1.2;
 	}
 
 	h2 a,
@@ -44,8 +43,10 @@ import {Icon} from "astro-icon/components";
 	}
 	nav {
 		display: flex;
-		align-items: right;
+		align-items: center;
 		justify-content: space-between;
+		gap: 0.5rem 1rem;
+		flex-wrap: wrap;
 	}
 	nav a {
 		padding: 1em 0.5em;
@@ -64,8 +65,25 @@ import {Icon} from "astro-icon/components";
 
 	.internal-links {
 		padding-right: 2.5em;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
 	}
-	
+
+	@media (max-width: 720px) {
+		nav {
+			align-items: flex-start;
+			flex-direction: column;
+		}
+		.internal-links {
+			width: 100%;
+			padding-right: 0;
+			flex-direction: column;
+		}
+		nav a {
+			padding: 0.65em 0.25em;
+		}
+	}
 
 	@media (max-width: 720px) {
 		.social-links {
