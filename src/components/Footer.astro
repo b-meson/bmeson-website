@@ -1,16 +1,23 @@
 ---
-const today = new Date();
-import { Icon } from 'astro-icon/components'
+import { Icon } from "astro-icon/components";
 ---
 
 <footer>
-	🏴 There is no such thing as intellectual property. 🏴
+	<p class="footer-message">🏴 There is no such thing as intellectual property. 🏴</p>
 	<div class="social-links">
-		<a href="https://bsky.app/profile/bmeson.lucyparsonslabs.com" target="_blank">
+		<a
+			href="https://bsky.app/profile/bmeson.lucyparsonslabs.com"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
 			<span class="srb-only">Follow Me on Bluesky</span>
 			<Icon class="bsk-icon-footer" name="bluesky" />
 		</a>
-		<a href="https://bsky.app/profile/lucyparsonslabs.com" target="_blank">
+		<a
+			href="https://bsky.app/profile/lucyparsonslabs.com"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
 			<span class="srb-only">Follow LPL on Bluesky</span>
 			<Icon class="bsk-icon-footer" name="bluesky" />
 		</a>
@@ -19,37 +26,53 @@ import { Icon } from 'astro-icon/components'
 
 <style>
 	footer {
-		padding: 1em 1em 4em 1em;
+		box-sizing: border-box;
+		padding: clamp(1rem, 4vw, 2rem) max(1rem, env(safe-area-inset-right)) clamp(2rem, 8vw, 4rem) max(1rem, env(safe-area-inset-left));
 		background: linear-gradient(var(--foreground));
 		color: rgb(var(--gray));
 		text-align: center;
-		font-family: 'Zen Maru Gothic', sans-serif;
-		bottom:0;
-		position: relative;
-  		width:100%;
-   		height:60px; /* Height of the footer */
+		font-family: "Zen Maru Gothic", sans-serif;
+		width: 100%;
+		min-height: 60px;
+	}
+	.footer-message {
+		max-width: 100%;
+		margin: 0 auto;
+		font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+		line-height: 1.5;
+		text-wrap: balance;
 	}
 	.social-links {
 		display: flex;
 		justify-content: center;
-		gap: 4em;
-		margin-top: 1em;
-		font-family: 'Zen Maru Gothic', sans-serif;
-		padding-right: 8px;
-
+		align-items: center;
+		flex-wrap: wrap;
+		gap: clamp(1.5rem, 8vw, 4rem);
+		margin-top: clamp(0.75rem, 3vw, 1rem);
+		font-family: "Zen Maru Gothic", sans-serif;
 	}
 	.social-links a {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 44px;
+		min-height: 44px;
 		text-decoration: none;
 		color: rgb(var(--gray));
-		padding-right: 8px;
+		padding: 0.25rem;
 	}
 	.social-links a:hover {
 		color: rgb(var(--gray-dark));
-		padding-right: 8px;
-
 	}
 
 	.bsk-icon-footer {
-		padding-left: 8px;
+		width: clamp(1.25rem, 5vw, 1.75rem);
+		height: auto;
+	}
+
+	@media (max-width: 360px) {
+		.social-links {
+			gap: 1rem;
+		}
 	}
 </style>
