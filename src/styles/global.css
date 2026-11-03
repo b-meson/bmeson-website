@@ -16,7 +16,7 @@
 	--secondary-dark: #100e0e;
 	--secondary-light: #c13c00;
 
-	--background: rgb(17, 18, 34);
+	--background: #111222;
 	--foreground: #191c34;
 	--border: #292e56;
 
@@ -65,8 +65,16 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: linear-gradient(var(--background));
-	background-size: 100% 600px;
+	background-color: var(--background);
+	background-image:
+		linear-gradient(
+			color-mix(in srgb, var(--background) 50%, transparent),
+			color-mix(in srgb, var(--background) 50%, transparent)
+		),
+		url('../assets/images/background.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: var(--copy);
