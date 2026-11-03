@@ -5,6 +5,7 @@ import Header from "../components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 import { Image } from "astro:assets";
 import berlinImage from "../assets/images/berlin_raw.jpg";
+import backgroundImage from "../assets/images/background.jpg";
 ---
 
 <!doctype html>
@@ -16,8 +17,8 @@ import berlinImage from "../assets/images/berlin_raw.jpg";
 	<body>
 		<Header />
 
-		<main class="main">
-			<div class="main">
+		<main class="home" style={`--background-image: url("${backgroundImage.src}")`}>
+			<div class="main-content">
 				<div class="img-index">
 					<Image
 						src={berlinImage}
@@ -25,30 +26,68 @@ import berlinImage from "../assets/images/berlin_raw.jpg";
 					/>
 				</div>
 
-				<h1>🧑‍🚀 Welcome visitor</h1>
+				
+				<h1>🧑‍🚀 Welcome</h1>
 				<br />
+
+				<div class="word-content">
+		
 				<p>
-					Hi everyone, I am working on building this new personal site
-					for myself. Click the About link to learn more about my
-					professional life.
+					Hi there, this is the personal website of Freddy Martinez
+					(that's me!). I am a national expert on issues of police
+					surveillance technologies, privacy, location tracking, and
+					other issues. I have worked with private and public clients,
+					including law firms, to investigate police practices. My
+					work has been covered extensively in both U.S. and national
+					news and I've done some of my own original writing. Read
+					more about my work in my <a href="/about">About</a> page.
+				</p>
+
+				<p><b>THIS WEBSITE IS A WORK IN PROGRESS!!</b></p>
+
+				<p>
+					I will occassionally update my blog with posts about my
+					interests like libertarian socialism, books I'm reading, and
+					whatever else. <i><a href="/interests">Interests</a></i> has more.
 				</p>
 
 				<p>
-					This website is built using <a href="https://astro.build/"
-						>Astro</a
-					>. I have a strong dislike of JavaScript and all things
-					front-end so its nice to use a static site generator.
+					This website is built using <a href="https://astro.build/" target="_blank"
+						rel="noopener noreferrer">Astro</a>. I have a strong dislike of 
+						JavaScript and all things front-end so its nice to use a 
+						static site generator.
 				</p>
+				</div>
+
 			</div>
 		</main>
 
 		<style is:global>
-			.main {
+			main.home {
+				position: relative;
+				isolation: isolate;
+			}
+
+			main.home::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				z-index: -1;
+				background-image: var(--background-image);
+				background-position: center;
+				background-size: cover;
+				opacity: 0.3;
+				pointer-events: none;
+			}
+
+			.home,
+			.main-content {
 				width: calc(100% - 2em);
 				max-width: 100%;
 				margin: 0;
 				text-align: center;
 			}
+
 			a:link {
 				color: rgb(var(--copy-light));
 			}
@@ -67,6 +106,7 @@ import berlinImage from "../assets/images/berlin_raw.jpg";
 			a:active {
 				color: rgb(var(--copy-lighter));
 			}
+
 		</style>
 
 		<Footer />

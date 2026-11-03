@@ -16,7 +16,7 @@
 	--secondary-dark: #100e0e;
 	--secondary-light: #c13c00;
 
-	--background: #111222;
+	--background: rgb(17, 18, 34);
 	--foreground: #191c34;
 	--border: #292e56;
 
@@ -247,4 +247,15 @@ ul li {
 	margin: auto;
 	padding: 1em;
 	color: rgb(var(--copy));
+}
+
+.word-content {
+	box-sizing: border-box;
+	width: calc(100% - 2rem);
+	max-width: 70rem;
+	margin: 0 auto;
+	font-size: clamp(1.125rem, 2.2vw, 1.625rem);
+	text-align: auto;
+	background: rgba(17, 18, 34, 0.7);
+	border-radius: 8px;
 }
