@@ -3,7 +3,8 @@
   "type": "module",
   "version": "0.0.1",
   "engines": {
-    "node": ">=22.12.0"
+    "node": ">=26.13.1",
+    "npm": "11.20.0"
   },
   "scripts": {
     "dev": "astro dev",
@@ -13,23 +14,31 @@
     "generate-types": "wrangler types"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^14.3.4",
-    "@astrojs/mdx": "^8.0.2",
+    "@astro-community/astro-embed-youtube": "^0.5.10",
+    "@astrojs/cloudflare": "^14.4.7",
+    "@astrojs/mdx": "^8.1.5",
     "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.4",
     "@embedpdf/react-pdf-viewer": "^2.15.1",
     "@embedpdf/snippet": "^2.15.1",
     "@iconify-json/mdi": "^1.2.3",
-    "astro": "^7.3.5",
+    "astro": "^7.4.11",
     "astro-icon": "^1.2.0",
     "astro-pdf": "^2.0.0",
-    "pdfjs-dist": "^6.4.299",
-    "sharp": "^0.35.0"
+    "autoprefixer": "^10.6.2",
+    "pdfjs-dist": "^6.5.438",
+    "postcss": "^8.5.32",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.5"
   },
   "allowScripts": {
-    "esbuild": true
+    "esbuild": true,
+    "fsevents@2.3.3": true,
+    "puppeteer@25.17.0": true,
+    "workerd@1.20261103.1": true,
+    "workerd@1.20261110.1": true
   },
   "devDependencies": {
-    "wrangler": "^4.149.0"
+    "wrangler": "^4.160.1"
   }
 }
