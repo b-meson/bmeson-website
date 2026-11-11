@@ -1,10 +1,10 @@
 {
   "name": "radiant-rotation",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "node": ">=26.13.1",
-    "npm": "11.20.0"
+    "npm": ">=11.20.0"
   },
   "scripts": {
     "dev": "astro dev",
