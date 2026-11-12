@@ -10,7 +10,8 @@ import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://bmeson.style',
+  site: "https://bmeson.github.io",
+  base: "bmeson-website",
   integrations: [mdx(), sitemap(), icon()],
 
   fonts: [
