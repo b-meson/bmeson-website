@@ -239,7 +239,8 @@ ul li {
 }
 
 .hero-image {
-	width: 100%;
+	max-width: 100%;
+	height: auto;
 }
 
 .hero-image img {

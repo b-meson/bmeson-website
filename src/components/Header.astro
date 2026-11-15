@@ -6,6 +6,8 @@ import HeaderLink from './HeaderLink.astro';
 <header>
 	<nav>
 		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Show navigation links">
+		<label class="menu-toggle-label" for="menu-toggle">Menu</label>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
@@ -47,6 +49,10 @@ import HeaderLink from './HeaderLink.astro';
 		gap: 0.5rem 1rem;
 		flex-wrap: wrap;
 	}
+	.menu-toggle,
+	.menu-toggle-label {
+		display: none;
+	}
 	nav a {
 		padding: 1em 0.5em;
 		color: var(--copy-light);
@@ -74,17 +80,37 @@ import HeaderLink from './HeaderLink.astro';
 			align-items: flex-start;
 			flex-direction: column;
 		}
+		.menu-toggle-label {
+			display: inline-block;
+			padding: 0.65em 0.25em;
+			color: var(--copy-light);
+			cursor: pointer;
+		}
+		.menu-toggle {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
+			clip: rect(0, 0, 0, 0);
+			white-space: nowrap;
+		}
+		.menu-toggle:focus-visible + .menu-toggle-label {
+			outline: 2px solid currentColor;
+			outline-offset: 2px;
+		}
 		.internal-links {
 			width: 100%;
 			padding-right: 0;
 			flex-direction: column;
+			display: none;
+		}
+		.menu-toggle:checked ~ .internal-links {
+			display: flex;
 		}
 		nav a {
 			padding: 0.65em 0.25em;
 		}
-	}
 
-	@media (max-width: 720px) {
 		.social-links {
 			display: none;
 		}
