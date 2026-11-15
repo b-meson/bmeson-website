@@ -7,7 +7,7 @@
 :root {
 
 	--primary: #8e9aff;
-	--primary-content:#000f8e;
+	--primary-content: #000f8e;
 	--foreground: #000a5b;
 	--primary-light: #0014c1;
 
@@ -67,10 +67,8 @@ body {
 	text-align: left;
 	background-color: var(--background);
 	background-image:
-		linear-gradient(
-			color-mix(in srgb, var(--background) 50%, transparent),
-			color-mix(in srgb, var(--background) 50%, transparent)
-		),
+		linear-gradient(color-mix(in srgb, var(--background) 50%, transparent),
+			color-mix(in srgb, var(--background) 50%, transparent)),
 		url('../assets/images/background.jpg');
 	background-position: center;
 	background-size: cover;
@@ -262,9 +260,29 @@ ul li {
 	box-sizing: border-box;
 	width: calc(100% - 2rem);
 	max-width: 70rem;
-	margin: 0 auto;
+	margin-inline: auto;
+	padding: clamp(1rem, 3vw, 2rem);
 	font-size: clamp(1.125rem, 2.2vw, 1.625rem);
-	text-align: auto;
-	background: rgba(17, 18, 34, 0.7);
+	text-align: left;
+	background: rgba(17, 18, 34, 0.9);
 	border-radius: 8px;
+}
+
+a {
+	color: var(--warning-content);
+	transition: color 0.2s ease-in-out;
+}
+
+a:link {
+	color: var(--warning-content);
+}
+
+/* mouse over link */
+a:hover {
+	color: var(--copy-lighter);
+}
+
+/* selected link */
+a:active {
+	color: var(--warning-content);
 }
