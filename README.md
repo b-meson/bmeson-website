@@ -1,5 +1,7 @@
 #  Freddy's Personal Webiste
 
+Available on https://bmeson.style. 
+
 > 🧑‍🚀 **Built on Astro** Do not contact me on GitHub.
 
 Features:
